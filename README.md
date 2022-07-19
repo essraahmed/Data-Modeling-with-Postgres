@@ -9,7 +9,6 @@ They'd like a data engineer to create a Postgres database with tables designed t
 2. Write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL.
 
 ### Project Dataset
-
 #### Song Dataset
 The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are file paths to two files in this dataset.
 ```
@@ -62,7 +61,6 @@ Project files<br>
         -start_time, hour, day, week, month, year, weekday
 
 ### ETL pipeline
-
 The ETL pipeline will process the data from JSON files `song_data` and `log_data` to create database using Python and SQL.
 `song_data` To create the songs and artists dimensional tables.
 `log_data` To create the time and users dimensional tables, as well as the songplays fact table.
