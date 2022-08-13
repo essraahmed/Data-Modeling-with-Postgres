@@ -1,14 +1,14 @@
 # Data Modeling with Postgres
 
-### Introduction
+## Introduction
 A startup called Sparkify wants to analyze the data they've been collecting on songs and user activity on their new music streaming app. The analytics team is particularly interested in understanding what songs users are listening to. Currently, they don't have an easy way to query their data, which resides in a directory of JSON logs on user activity on the app, as well as a directory with JSON metadata on the songs in their app.
 They'd like a data engineer to create a Postgres database with tables designed to optimize queries on song play analysis, and bring you on the project.
 
-### Project Description
+## Project Description
 1. Define fact and dimension tables for a star schema.
 2. Write an ETL pipeline that transfers data from files in two local directories into these tables in Postgres using Python and SQL.
 
-### Project Dataset
+## Project Dataset
 #### Song Dataset
 The first dataset is a subset of real data from the Million Song Dataset. Each file is in JSON format and contains metadata about a song and the artist of that song. The files are partitioned by the first three letters of each song's track ID. For example, here are file paths to two files in this dataset.
 ```
@@ -32,7 +32,7 @@ log_data/2018/11/2018-11-13-events.json
 And below is an example of what the data in a log file, 2018-11-12-events.json, looks like.
 ![log-data](log-data.png)
 
-### Project Template
+## Project Template
 Project files<br>
 
 1. `test.ipynb`: displays the first few rows of each table to let you check your database.
@@ -42,7 +42,7 @@ Project files<br>
 5. `sql_queries.py`: contains all sql queries, and is imported into the last three files above.
 6. `README.md`: provides discussion on the project.
 
-### Database Schema Design
+## Database Schema Design
 
 ![Schema](schema.png)
 
@@ -60,12 +60,12 @@ Project files<br>
 4. ***time*** - timestamps of records in songplays broken down into specific units
         -start_time, hour, day, week, month, year, weekday
 
-### ETL pipeline
+## ETL pipeline
 The ETL pipeline will process the data from JSON files `song_data` and `log_data` to create database using Python and SQL.
 `song_data` To create the songs and artists dimensional tables.
 `log_data` To create the time and users dimensional tables, as well as the songplays fact table.
 
-### How to run the Python Scripts
+## How to run the Python Scripts
 
 #### To create tables
 1. Run `create_tables.py` to create your database and tables.
@@ -77,10 +77,10 @@ The ETL pipeline will process the data from JSON files `song_data` and `log_data
 
 3. Run `test.ipynb` to confirm your records were successfully inserted into each table.
 
-### Example query
+## Example query
 
 ```
 SELECT count(*) FROM songs
 ```
-### Author
+## Author
 Esraa Ahmed | <a href="https://linkedin.com/in/esraa-ahmed-ibrahim2" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="esraa-ahmed-ibrahim2" height="15" width="15" /></a>
