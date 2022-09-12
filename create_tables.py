@@ -13,7 +13,7 @@ def create_database():
     conn.set_session(autocommit=True)
     cur = conn.cursor()
     
-    # create sparkify database with UTF8 encoding
+    # create sparkify database with UTF8 encoding create by esraa ahmed
     cur.execute("DROP DATABASE IF EXISTS sparkifydb")
     cur.execute("CREATE DATABASE sparkifydb WITH ENCODING 'utf8' TEMPLATE template0")
 
@@ -44,7 +44,7 @@ def create_tables(cur, conn):
         cur.execute(query)
         conn.commit()
 
-
+  #Created by esraa ahmed on 18/07/2022
 def main():
     """
     - Drops (if exists) and Creates the sparkify database. 
